@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Train Scheduler</title>
+
+  
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="assets/styles.css">
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+  <!-- font awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+</head>
+
+
+<body>
+
+  <!-- BOOTSTRAP STUFF +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+  <div class="container">
+    <!-- jumbo header -->
+    <div class="jumbotron">
+
+      <h1 class="display-3 text-primary"><i class="fas fa-train"></i>&nbsp Grand Central Schedule</h1>
+      <p class="display-5"></p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-header bg-primary"</h3><i class="fas fa-clock"></i>
+        Current Train Schedule
+      </h3>
+      <div class="card-body">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Train Name</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Frequency (min)</th>
+              <th scope="col">Next Arrival</th>
+              <th scope="col">Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody id="outPutRow">
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+      <h3 class="card-header bg-primary"</h3><i class="fas fa-plus"></i>
+        Add Train
+      </h3>
+      <div class="card-body">
+
+        <form>
+          <div class="form-group p-x-1">
+            <label for="name">Train Name</label>
+            <input type="" class="form-control" id="name" placeholder="">
+          </div>
+          <div class="form-group p-x-1">
+            <label for="destination">Destination</label>
+            <input type="" class="form-control" id="destination" placeholder="">
+          </div>
+          <div class="form-group p-x-1">
+            <label for="frequency">Frequency(min)</label>
+            <input type="" class="form-control" id="frequency" placeholder="">
+          </div>
+          <div class="form-group p-x-1">
+            <label for="firstTrainName">First Train Time (HH:mm - military time)</label>
+            <input type="time" class="form-control" id="firstTrainTime" placeholder="">
+          </div>
+          
+
+          <button type="submit" class="btn btn-primary m-x-1 m-b-2" id="submitBtn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- END BOOTSTRAP STUFF +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <!-- Link to Moment.js should go here -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+  <!-- script -->
+  <script src="assets/main.js"></script>
+</body>
+
+</html>
